@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, iniatial-scale=1">
+<link href="css/jquery.mobile.min.css" rel="stylesheet" type="text/css">
+<link href="css/jquery.mobile.structure.min.css" rel="stylesheet" type="text/css">
+
+<script src="js/jquery.min.js"></script>
+<script src="js/jquery.mobile.min.js"></script>
+</head>
+<body>
+<script>
+	
+$(document).bind("pageinit",function(){
+  // Pengiraan menggunakan ajax
+  $('#hantar').click(function(){
+		$.ajax({
+			type: 'POST',
+			url: 'form4.php',
+			data: $("#form1").serialize(),
+			success: function(data){
+				$('#data').html(data);
+				$('#try_ajax').popup('open');
+				}
+			});
+		
+	});	
+});
+
+</script>
+
+<!--step 1 aka Page 1-->
+<div data data-role="page"  id="page1">
+	<!--content-->
+	<div role="main" class="ui-content" style="text-align:center">
+		<h1>Selamat Datang</h1>
+		<img src ="img/putrajaya.jpg" />
+		<h3>Web Mobile Rasmi PUTRAJAYA</h3>
+		<div data-role="collapsible" data-inset="false">
+		<h3>Info PUTRAJAYA</h3>
+		<ul data-role="listview">
+			<li><a href="#page2">Panduan Ke Putrajaya</a> </li>
+			<li><a href="#page3">Penginapan</a> </li>
+			<li><a href="#page4">Direktori</a> </li>
+			<li><a href="#page5">Direktori</a> </li>
+		</ul>
+		</div>
+		
+	</div>
+
+	<div data data-role="footer"  data-position="fixed">
+		<h4>Hak Cipta SD.BPM.JPA @ 2014 | Web Mobile Rasmi HRMIS</h4>
+	</div>
+</div>	
+	
+	<!--Step1 aka Page2-->
+	<div data-role="page"  id="page2">
+		<!--Header-->
+		<div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+			<h3>Panduan Ke Putrajaya</h3>
+		</div>
+		
+	<!--content-->
+	<div role="main" class="ui-content">
+		<h2>Dari Kuala Lumpur</h2>
+		<h4>Laluan 1</h4>
+		Melalui Lebuhraya Kuala Lumpur-Putrajaya (MEX) dan selepas tol Putrajaya ambil laluan kiri dan terus ke Putrajaya.
+		
+		<h2>Dari Kuala Lumpur</h2>
+		<h4>Laluan 2</h4>
+		<p>Melalui Lebuhraya Utara-Selatan Plus (E2) – selepas tol Kajang ambil laluan terus ke Putrajaya.</p>
+	
+		<h2>Dari KLIA</h2>
+		<h4>Laluan 3</h4>
+		<p>Melalui Lebuhraya Utara-Selatan Hubungan Tengah (ELITE) dan keluar di tol Putrajaya dan laluan terus ke Putrajaya.</p>
+	
+	</div>
+	
+	<!--footer-->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#" data-icon="grid" class="ui-btn-active ui-state-persist">Panduan Ke Putrajaya</a> </li>
+				<li><a href="#page3" data-icon="star"  >Penginapan</a> </li>
+				<li><a href="#page4" data-icon="gear"  >Direktori</a> </li>
+			</ul>
+		</div><!--navbar-->
+			
+	</div>
+	
+	<a href="#pop1"   class="ui-btn ui-btn-inline" data-transition="pop" data-rel="popup">Petunjuk Penting</a>
+			<div data-role="popup" id="pop1" data-dismissible="false">
+			<a href="#" data-rel="back" class="ui-btn ui-corner-all ui-shadow ui-btn-a ui-icon-delete ui-btn-icon-notext ui-btn-right">Close</a>
+			<div data-role="header">
+				<h3>Petunjuk Penting</h3>
+			</div>
+			<div role="main" class="ui-content">		
+				<ol>
+				<li>Pintu masuk utama berdekatan Hospital Serdang;</li>
+				<li>Pintu masuk kedua berdekatan IOI Resort;</a> </li>
+				<li>Pintu masuk ketiga berdekatan Cyberjaya (Putrajaya Central);</li>
+				<li>Pintu masuk keemapat berdekatan Bangi Kampung Abu Bakar Baginda;</li>
+				</ol>
+				<a href="#" class="ui-btn ui-corner-all ui-shadow" data-rel="back">kembali</a>
+		
+			</div>
+	
+			</div>	
+	</div>
+	
+	<!--Step1 aka Page3333333333333333333333333333333333333333333333333333333333333333333333333333333333-->
+	
+	<!--Step1 aka Page3333333333333333333333333333333333333333333333333333333333333333333333333333333333-->
+	<div data-role="page"  id="page3">
+		<!--Header-->
+		<div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+			<h3>Penginapan</h3>
+		</div>
+		
+	<!--content penginapan putrajaya-->
+	<div role="main" class="ui-content">
+	<img src="img/pullman hotel.jpg" />
+		<h2>Pullman Putrajaya Lakeside</h2>
+		Tepian Tasik Pullman Putrajaya, tarikan yang terkini di Putrajaya, pusat pentadbiran persekutuan negara, telah berada di dalam kelas tersendiri, cekap and menawarkan keunikan paling menarik dengan pusat perkhidmatan spa yang terbesar di Malaysia.
+		
+	</div>
+	<div role="main" class="ui-content">
+	<img src="img/shangrila hotel.jpg" />
+		<h2>Hotel Shangri-La</h2>
+		Shangri-La Putrajaya terletak di puncak bukit yang menghijau menghiasi Putrajaya, sebagai bandar taman "pintar" Malaysia di abad ke 21 yang menempatkan pusat Pentadbiran Kerajaan Persekutuan yang baru. Tasik Pullman Putrajaya, tarikan yang terkini di Putrajaya, pusat pentadbiran persekutuan negara, telah berada di dalam kelas tersendiri, cekap and menawarkan keunikan paling menarik dengan pusat perkhidmatan spa yang terbesar di Malaysia.
+		
+	</div>
+	<div role="main" class="ui-content">
+	<img src="img/everly hotel.jpg" />
+		<h2>Everly Hotel</h2>
+		Terletak di Presint 1, Putrajaya Everly disambungkan ke Pusat Membeli-belah Alamanda. Tasik Pullman Putrajaya, tarikan yang terkini di Putrajaya, pusat pentadbiran persekutuan negara, telah berada di dalam kelas tersendiri, cekap and menawarkan keunikan paling menarik dengan pusat perkhidmatan spa yang terbesar di Malaysia.
+		
+	</div>
+	<!--footer-->
+	<div data-role="footer" data-position="fixed">
+		<div data-role="navbar">
+			<ul>
+				<li><a href="#page3" data-icon="grid" >Panduan Ke Putrajaya</a> </li>
+				<li><a href="#" data-icon="star" class="ui-btn-active ui-state-persist" >Penginapan</a> </li>
+				<li><a href="#page4" data-icon="gear"  >Direktori</a> </li>
+			</ul>
+		</div><!--navbar-->
+			
+	</div>
+	<a href="#page2" class="ui-btn" data-transition="pop" data-direction="reverse">Panduan Ke Putrajaya</a>
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+            <ul>
+                <li><a href="#" data-icon="grid" >Panduan Ke Putrajaya</a> </li>
+				<li><a href="#page2" data-icon="star" class="ui-btn-active ui-state-persist" >Penginapan</a> </li>
+				<li><a href="#page4" data-icon="gear"  >Direktori</a> </li>
+            </ul>
+        </div><!-- /navbar -->
+  </div>
+ </div> 
+  
+  <!--Step 1 aka --------------------------------------------------------------Page 4 -->
+<div data-role="page" id="page4">
+
+	<!--header -->
+  <div data-role="header" data-position="fixed" data-add-back-btn="true" data-back-btn-text="Back">
+	<h3>Direktori</h3>	
+  </div>
+  
+  <!--content -->
+  <div role="main" class="ui-content">	
+	<h3>Hotel Shangri-La</h3>
+	<ul data-role="listview" data-filter="true" data-filter-placeholder="Taipkan Nama">
+		<li>
+			<img src="img/ladydiana.jpg" width="200" />
+			<strong> Nama :</strong> Lady Diana
+			<p> <strong>Jawatan :</strong>  Pengarah Urusan</p>
+			<p>
+			<a href="tel=+6038887 8888" class="ui-btn ui-icon-phone ui-btn-icon-notext ui-corner-all ui-btn-inline">Telefon</a>
+			<a href="sms://60133422264" class="ui-btn ui-icon-mail ui-btn-icon-notext ui-corner-all ui-btn-inline"> SMS </a>
+			<a href="mailto:azniza@jpa.gov.my" class="ui-btn ui-icon-action ui-btn-icon-notext ui-corner-all ui-btn-inline"> Pesanan Email </a>
+			</p>
+		</li>
+		<li>			
+			<a href="#popupMenu" data-rel="popup" data-transition="slideup">
+				<img src="img/tomcruise.jpg" width="200" />
+				<strong> Nama :</strong> Tom Cruise
+				<p> <strong>Jawatan :</strong> Pengarah</p>
+			</a>
+			<div data-role="popup" id="popupMenu" data-theme="b">
+				<ul data-role="listview" data-inset="true" style="min-width:210px;">				
+				<li><a href="tel=+6038887 8888" class="ui-btn ui-icon-phone ui-corner-all ui-btn-inline ui-btn-icon-left">Telefon</a></li>
+				<li><a href="sms://60133422264" class="ui-btn ui-icon-mail ui-corner-all ui-btn-inline ui-btn-icon-left"> SMS </a></li>
+				<li><a href="mailto:tomcruise@jpa.gov.my" class="ui-btn ui-icon-action ui-corner-all ui-btn-inline ui-btn-icon-left"> Pesanan Email </a></li>				
+				</ul>
+			</div>
+		</li>
+		<li>
+			<img src="img/katewinslet.jpg" width="200" />
+			<strong> Nama :</strong> Kate Winslet
+			<p> <strong>Jawatan :</strong> Executif Pemasaran</p>
+			<p> <strong>E-Mel:</strong> katewinslet@jpa.gov.my </p>
+		</li>		
+		<li>
+			<img src="img/loe.jpg" width="200" />
+			<strong> Nama :</strong> Leonardo DiCaprio
+			<p> <strong>Jawatan :</strong> Pegawai Pemasaran</p>
+			<p> <strong>E-Mel:</strong>   leonardo@jpa.gov.my </p>
+		</li>
+	</ul>		
+  </div>
+  <!--footer -->
+  <div data-role="footer" data-position="fixed">
+    <div data-role="navbar">
+            <ul>
+                <li><a href="#page3" data-icon="grid">Panduan Ke Putrajaya</a></li>
+                <li><a href="#page2" data-icon="star">Penginapan</a></li>
+                <li><a href="#" data-icon="gear" class="ui-btn-active ui-state-persist">Direktori</a></li>
+            </ul>
+        </div><!-- /navbar -->
+  </div>
+  </div> 
+  
+  
+  
+  
+  
+  
+  
+		
+
+		
+</body>
+</html>
